@@ -36,9 +36,9 @@ from typing import Dict, List, Optional, Any, Union
 from dataclasses import dataclass, asdict
 import logging
 
-from src import config
-from src.features import FeatureManager
-from src.context_window import ContextWindow
+import config
+from features import FeatureManager
+from context_window import ContextWindow
 
 logger = logging.getLogger(__name__)
 
@@ -344,3 +344,4 @@ def create_predictor(
         model=model,
         class_names=class_names
     )
+
