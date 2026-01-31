@@ -29,9 +29,8 @@ CONFIG FLAG: ENABLE_CONTEXT_WINDOW
 import numpy as np
 from typing import List, Optional, Union
 import logging
-
-from src import config
-from src.features import FeatureManager
+import config
+from features import FeatureManager
 
 logger = logging.getLogger(__name__)
 
@@ -280,3 +279,4 @@ def create_context_window(feature_manager: FeatureManager) -> Optional[ContextWi
     if config.ENABLE_CONTEXT_WINDOW:
         return ContextWindow(feature_manager)
     return None
+
