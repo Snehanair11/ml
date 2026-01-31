@@ -39,31 +39,31 @@ import logging
 from typing import Dict, Any, Optional, List
 from dataclasses import dataclass, field
 
-from src.chatbot.enhanced_conversation_state import (
+from chatbot.enhanced_conversation_state import (
     EnhancedConversationState,
     Phase,
     AdviceMode,
     get_enhanced_state,
     reset_enhanced_state
 )
-from src.chatbot.phase_engine import (
+from chatbot.phase_engine import (
     determine_phase,
     get_phase_rules,
     PhaseEngine
 )
-from src.chatbot.advice_detector import (
+from chatbot.advice_detector import (
     detect_advice_mode,
     calculate_venting_score,
     should_ask_about_advice,
     get_advice_question
 )
-from src.chatbot.memory_recall_controller import check_memory_recall
-from src.chatbot.cooldown_manager import (
+from chatbot.memory_recall_controller import check_memory_recall
+from chatbot.cooldown_manager import (
     apply_cooldowns,
     filter_replies_by_cooldown,
     is_category_on_cooldown
 )
-from src.chatbot import conversation_intelligence_config as ci_config
+from chatbot import conversation_intelligence_config as ci_config
 
 logger = logging.getLogger(__name__)
 
@@ -422,3 +422,4 @@ def get_advice_question_if_needed(context: IntelligenceContext) -> Optional[str]
     if context.should_ask_advice_preference:
         return get_advice_question()
     return None
+
