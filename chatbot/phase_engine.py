@@ -33,12 +33,12 @@ When disabled, no phase logic is applied.
 import logging
 from typing import Dict, Optional, Tuple, Any
 
-from src.chatbot.enhanced_conversation_state import (
+from chatbot.enhanced_conversation_state import (
     EnhancedConversationState,
     Phase,
     EmotionTrend
 )
-from src.chatbot import conversation_intelligence_config as ci_config
+from chatbot import conversation_intelligence_config as ci_config
 
 logger = logging.getLogger(__name__)
 
@@ -435,3 +435,4 @@ def determine_phase(
 def get_phase_rules(phase: str) -> Dict[str, Any]:
     """Get rules for a phase."""
     return get_phase_engine().get_phase_rules(phase)
+
