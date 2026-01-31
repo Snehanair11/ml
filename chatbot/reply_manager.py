@@ -1,6 +1,6 @@
 import random
-from src.chatbot.memory_manager import get_memory_hint, get_similar_past_topic, get_recurring_emotion
-from src.signal_mapper import count_signals_in_text
+from chatbot.memory_manager import get_memory_hint, get_similar_past_topic, get_recurring_emotion
+from signal_mapper import count_signals_in_text
 
 # ======================================================
 # GREET / EXIT WORDS
@@ -4976,3 +4976,4 @@ def generate_reply(anon_id: str, emotion: str, decision: dict, text: str, conver
 
     except Exception:
         return random.choice(FALLBACK_REPLIES)
+
