@@ -42,7 +42,7 @@ from typing import List, Dict, Optional, Any
 from scipy.sparse import issparse
 
 # Import config
-from src import config
+import config
 
 # Import feature extractors
 from .tfidf_features import TfidfFeatureExtractor
@@ -360,3 +360,4 @@ def create_feature_manager_from_config() -> FeatureManager:
         tfidf_word_path=config.MODELS.get('tfidf_word'),
         tfidf_char_path=config.MODELS.get('tfidf_char')
     )
+
