@@ -32,21 +32,21 @@ Or keep both and switch via config.
 
 """
 
-from src.inference.predict_emotion import predict_emotion
-from src.chatbot.decision_manager import decide_next_step
-from src.chatbot.reply_manager import generate_reply
-from src.chatbot.memory_manager import update_memory
-from src.chatbot.conversation_state import update_conversation, mark_followup_done
-from src.signal_mapper import count_signals_in_text
+from inference.predict_emotion import predict_emotion
+from chatbot.decision_manager import decide_next_step
+from chatbot.reply_manager import generate_reply
+from chatbot.memory_manager import update_memory
+from chatbot.conversation_state import update_conversation, mark_followup_done
+from signal_mapper import count_signals_in_text
 
 # Import intelligence layer
-from src.chatbot.conversation_intelligence import (
+from chatbot.conversation_intelligence import (
     process_intelligence,
     post_reply_update,
     get_advice_question_if_needed,
     IntelligenceContext
 )
-from src.chatbot import conversation_intelligence_config as ci_config
+from chatbot import conversation_intelligence_config as ci_config
 
 
 def handle_message(payload: dict) -> dict:
@@ -269,3 +269,4 @@ def handle_message_original(payload: dict) -> dict:
     """
     from src.chatbot.dialogue_manager import handle_message as original
     return original(payload)
+
