@@ -39,11 +39,11 @@ Disable via ENABLE_ADVICE_DETECTION = False in config.
 import re
 from typing import Tuple, Optional
 
-from src.chatbot.enhanced_conversation_state import (
+from chatbot.enhanced_conversation_state import (
     EnhancedConversationState,
     AdviceMode
 )
-from src.chatbot import conversation_intelligence_config as ci_config
+from chatbot import conversation_intelligence_config as ci_config
 
 
 # =============================================================================
@@ -358,3 +358,4 @@ def update_advice_mode_from_response(
         return True
 
     return False
+
