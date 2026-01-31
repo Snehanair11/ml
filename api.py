@@ -26,11 +26,7 @@ def health():
 def chat(req: ChatRequest):
     try:
         # ---------- EMOTION ----------
-        emotion_result = predict_emotion({
-            "user_id": req.anon_id,
-            "text": req.text,
-            "timestamp": req.timestamp
-        })
+        emotion_result = predict_emotion(req.text)
 
         if not isinstance(emotion_result, dict):
             raise ValueError("predict_emotion did not return a dict")
