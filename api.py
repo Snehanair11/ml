@@ -47,7 +47,9 @@ def chat(req: ChatRequest):
 
         return {
             "emotion": emotion,
-            "reply": reply
+            "score": emotion_result.get("score"),
+            "reply": reply,
+            "conversation_context": emotion_result.get("conversation_context")
         }
 
     except Exception as e:
