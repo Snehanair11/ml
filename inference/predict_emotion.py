@@ -2,8 +2,8 @@ import re
 import joblib
 from scipy.sparse import hstack
 from nltk.stem import WordNetLemmatizer
-from src.preprocessing.preprocess_text import preprocess_text
-from src.preprocessing.typo_handler import normalize_text_with_typo_fix
+from preprocessing.preprocess_text import preprocess_text
+from preprocessing.typo_handler import normalize_text_with_typo_fix
 
 # ======================================================
 # INIT
@@ -1415,4 +1415,5 @@ def predict_emotion(text: str):
     return {
         "emotion": emotion,
         "score": round(score, 4)
+
     }
