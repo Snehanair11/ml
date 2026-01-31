@@ -46,7 +46,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.base import BaseEstimator, ClassifierMixin
 
 from src import config
-from src.features import FeatureManager
+from features import FeatureManager
 
 logger = logging.getLogger(__name__)
 
@@ -381,3 +381,4 @@ def create_hierarchical_classifier() -> Optional[HierarchicalClassifier]:
     if config.ENABLE_HIERARCHICAL_CLASSIFICATION:
         return HierarchicalClassifier()
     return None
+
