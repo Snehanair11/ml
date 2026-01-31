@@ -44,16 +44,16 @@ import joblib
 import numpy as np
 from typing import List, Optional, Dict, Any, Union
 
-from src import config
-from src.features import FeatureManager
-from src.confidence_predictor import (
+import config
+from features import FeatureManager
+from confidence_predictor import (
     ConfidenceAwarePredictor,
     PredictionResult,
     format_prediction_for_api
 )
-from src.context_window import ContextWindow
-from src.ensemble_classifier import create_classifier, EnsembleClassifier
-from src.hierarchical_classifier import HierarchicalClassifier
+from context_window import ContextWindow
+from ensemble_classifier import create_classifier, EnsembleClassifier
+from hierarchical_classifier import HierarchicalClassifier
 
 logger = logging.getLogger(__name__)
 
@@ -324,3 +324,4 @@ def get_detector() -> EmotionDetector:
     if _detector_instance is None:
         _detector_instance = EmotionDetector()
     return _detector_instance
+
