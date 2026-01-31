@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.inference.predict_emotion import predict_emotion
+from inference.predict_emotion import predict_emotion
 
 app = FastAPI()
 
