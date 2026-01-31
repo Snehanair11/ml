@@ -26,7 +26,7 @@ from typing import Dict, List, Optional, Set, Any
 from collections import deque
 from dataclasses import dataclass, field
 
-from src.chatbot import conversation_intelligence_config as ci_config
+from chatbot import conversation_intelligence_config as ci_config
 
 
 # =============================================================================
@@ -381,3 +381,4 @@ def reset_enhanced_state(anon_id: str):
 def clear_all_enhanced_states():
     """Clear all enhanced states (for testing/reset)."""
     _enhanced_states.clear()
+
