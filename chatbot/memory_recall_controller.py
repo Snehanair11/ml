@@ -33,12 +33,12 @@ Disable via ENABLE_MEMORY_RECALL = False in config.
 import random
 from typing import Dict, Optional, Tuple, Any
 
-from src.chatbot.enhanced_conversation_state import (
+from chatbot.enhanced_conversation_state import (
     EnhancedConversationState,
     Phase
 )
-from src.chatbot import conversation_intelligence_config as ci_config
-from src.chatbot.memory_manager import (
+from chatbot import conversation_intelligence_config as ci_config
+from chatbot.memory_manager import (
     get_similar_past_topic,
     get_recurring_emotion,
     TOPIC_KEYWORDS
@@ -312,3 +312,4 @@ def check_memory_recall(
             state.add_memory_topic(memory_info["topic"])
 
     return response
+
