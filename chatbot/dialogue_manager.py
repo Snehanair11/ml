@@ -1,15 +1,15 @@
-from src.inference.predict_emotion import predict_emotion
-from src.chatbot.decision_manager import decide_next_step
-from src.chatbot.reply_manager import generate_reply
-from src.chatbot.memory_manager import update_memory
-from src.chatbot.conversation_state import update_conversation, mark_followup_done
-from src.signal_mapper import count_signals_in_text
+from inference.predict_emotion import predict_emotion
+from chatbot.decision_manager import decide_next_step
+from chatbot.reply_manager import generate_reply
+from chatbot.memory_manager import update_memory
+from chatbot.conversation_state import update_conversation, mark_followup_done
+from signal_mapper import count_signals_in_text
 
 # ---- NEW MODULE IMPORTS ----
-from src.chatbot.phase_manager import determine_phase, ENABLE_PHASE_MANAGER
-from src.chatbot.intent_manager import detect_intent, ENABLE_INTENT_MANAGER
-from src.chatbot.cooldown_manager import decrement_cooldowns, ENABLE_COOLDOWNS
-from src.chatbot.memory_policy import is_memory_allowed, ENABLE_MEMORY_POLICY
+from chatbot.phase_manager import determine_phase, ENABLE_PHASE_MANAGER
+from chatbot.intent_manager import detect_intent, ENABLE_INTENT_MANAGER
+from chatbot.cooldown_manager import decrement_cooldowns, ENABLE_COOLDOWNS
+from chatbot.memory_policy import is_memory_allowed, ENABLE_MEMORY_POLICY
 
 def handle_message(payload: dict):
     anon_id = payload["anon_id"]
@@ -101,3 +101,4 @@ def handle_message(payload: dict):
             "topic": conversation_context.get("topic")
         }
     }
+
