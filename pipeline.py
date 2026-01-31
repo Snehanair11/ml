@@ -1,4 +1,4 @@
-from src.chatbot.dialogue_manager import handle_message
+from chatbot.dialogue_manager import handle_message
 
 def run_pipeline(payload: dict):
     """
@@ -6,3 +6,4 @@ def run_pipeline(payload: dict):
     """
 
     return handle_message(payload)
+
