@@ -41,7 +41,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.base import BaseEstimator, ClassifierMixin
 
-from src import config
+import config
 
 logger = logging.getLogger(__name__)
 
@@ -414,3 +414,4 @@ def create_classifier() -> BaseEstimator:
         return EnsembleClassifier(weights=config.ENSEMBLE_WEIGHTS.copy())
     else:
         return SingleModelClassifier(model_type=config.DEFAULT_SINGLE_MODEL)
+
